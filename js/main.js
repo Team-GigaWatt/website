@@ -22,23 +22,28 @@ document.addEventListener('DOMContentLoaded', () => {
         progress += Math.floor(Math.random() * 10) + 1;
         if (progress > 100) progress = 100;
         
-        progressValue.textContent = `${progress}%`;
+        if (progressValue) {
+            progressValue.textContent = `${progress}%`;
+        }
         
         if (progress === 100) {
             clearInterval(interval);
             // Hide preloader after a slight delay
-            setTimeout(() => {
-                preloader.style.opacity = '0';
+            if (preloader) {
                 setTimeout(() => {
-                    preloader.style.display = 'none';
+                    preloader.style.opacity = '0';
+                    setTimeout(() => {
+                        preloader.style.display = 'none';
+                    }, 500);
                 }, 500);
-            }, 500);
+            }
         }
     }, 150);
 });
 
 // Sticky Header on Scroll
 window.addEventListener('scroll', () => {
+    if (!header) return;
     if (window.scrollY > 100) {
         header.classList.add('scrolled');
     } else {
@@ -47,20 +52,25 @@ window.addEventListener('scroll', () => {
 });
 
 // Mobile Navigation
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    hamburger.classList.toggle('active');
-});
+if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+}
 
 // Close mobile menu when clicking on a nav link
-navLinksItems.forEach(item => {
-    item.addEventListener('click', () => {
-        if (navLinks.classList.contains('active')) {
-            navLinks.classList.remove('active');
-            hamburger.classList.remove('active');
-        }
+if (navLinks && navLinksItems.length > 0) {
+    navLinksItems.forEach(item => {
+        item.addEventListener('click', () => {
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                if (hamburger) hamburger.classList.remove('active');
+            }
+        });
     });
-});
+}
+
 
 // Testimonial slider
 if (testimonialDots.length > 0) {
@@ -106,3 +116,6 @@ const animateOnScroll = () => {
 };
 
 window.addEventListener('scroll', animateOnScroll);
+
+// Trigger animation on initial load
+animateOnScroll();

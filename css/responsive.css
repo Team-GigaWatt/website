@@ -19,6 +19,10 @@
     .structure-content {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .sponsors-grid.small-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 /* Medium devices (tablets, less than 992px) */
@@ -61,6 +65,39 @@
 
     .about-image {
         order: -1;
+    }
+
+    .sponsors-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sponsors-grid.small-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .sponsor-item {
+        height: auto;
+        min-height: 180px;
+    }
+
+    .title-sponsor-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sponsor-benefits {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .tier-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tier-cards .tier-card:first-child,
+    .tier-cards .tier-card:last-child {
+        max-width: 100%;
+        grid-column: span 2;
     }
 
     .slide .content h1 {
@@ -148,6 +185,34 @@
         justify-content: center;
     }
 
+    .sponsors-grid.small-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sponsor-item img {
+        max-height: 70px;
+    }
+
+    .tier-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .tier-cards .tier-card:first-child,
+    .tier-cards .tier-card:last-child {
+        grid-column: span 1;
+    }
+
+    .benefits-list li {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .benefits-list li i {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
     /* Banner */
     .page-banner {
         height: 30vh;
@@ -191,6 +256,18 @@
         font-size: 0.85rem;
     }
 
+    .sponsors-grid.small-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sponsor-item {
+        padding: 15px;
+    }
+
+    .sponsor-item h3 {
+        font-size: 1rem;
+    }
+
     .slide .content h1 {
         font-size: 2rem;
     }
@@ -210,5 +287,715 @@
 
     .banner-content h1 {
         font-size: 2rem;
+    }
+}
+
+/* Sponsors Page Styles */
+.sponsors-intro,
+.title-sponsors,
+.sponsor-tier,
+.become-sponsor {
+    padding: 80px 0;
+}
+
+.sponsors-intro {
+    background-color: white;
+}
+
+.title-sponsors {
+    background-color: var(--light-gray);
+}
+
+.sponsor-tier:nth-child(odd) {
+    background-color: white;
+}
+
+.sponsor-tier:nth-child(even) {
+    background-color: var(--light-gray);
+}
+
+.become-sponsor {
+    background-color: white;
+}
+
+/* Section Headings */
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+}
+
+.underline {
+    height: 5px;
+    width: 80px;
+    background-color: var(--primary-color);
+    margin: 0 auto;
+}
+
+/* Title Sponsors Grid */
+.title-sponsors-grid {
+    display: grid;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.title-sponsor-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+
+.sponsor-logo {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 40px;
+    flex-shrink: 0;
+}
+
+.sponsor-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.sponsor-content {
+    flex: 1;
+}
+
+.sponsor-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.sponsor-content p {
+    color: var(--gray-color);
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+}
+
+.sponsor-link {
+    color: var(--primary-color);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+}
+
+.sponsor-link i {
+    margin-left: 8px;
+    font-size: 0.9rem;
+}
+
+.sponsor-link:hover {
+    text-decoration: underline;
+}
+
+/* Sponsors Grid */
+.sponsors-grid {
+    display: grid;
+    gap: 30px;
+}
+
+.sponsors-grid.small-grid {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.sponsor-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sponsors-grid.small-grid .sponsor-item {
+    height: 180px;
+    padding: 20px 15px;
+}
+
+.sponsor-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.sponsor-item img {
+    max-width: 80%;
+    max-height: 100px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.sponsors-grid.small-grid .sponsor-item img {
+    max-height: 80px;
+    margin-bottom: 15px;
+}
+
+.sponsor-item h3 {
+    color: var(--dark-color);
+    font-size: 1.2rem;
+}
+
+.sponsors-grid.small-grid .sponsor-item h3 {
+    font-size: 1rem;
+}
+
+/* Become Sponsor Section */
+.sponsor-benefits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.benefits-content h3, 
+.sponsor-tiers h3 {
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+.benefits-list li {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.benefits-list li i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-right: 20px;
+}
+
+.benefits-list li h4 {
+    color: var(--dark-color);
+    margin-bottom: 10px;
+}
+
+.benefits-list li p {
+    color: var(--gray-color);
+    font-size: 0.95rem;
+}
+
+/* Tier Cards */
+.tier-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.tier-cards .tier-card:first-child,
+.tier-cards .tier-card:last-child {
+    grid-column: 1 / -1;
+    max-width: 400px;
+    justify-self: center;
+}
+
+.tier-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.tier-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.tier-header h4 {
+    margin-bottom: 5px;
+}
+
+.tier-header span {
+    font-weight: 600;
+}
+
+.tier-header.title-tier {
+    background-color: #000;
+}
+
+.tier-header.platinum-tier {
+    background-color: #7a7a7a;
+}
+
+.tier-header.gold-tier {
+    background-color: #d4af37;
+}
+
+.tier-header.silver-tier {
+    background-color: #C0C0C0;
+}
+
+.tier-header.bronze-tier {
+    background-color: #CD7F32;
+}
+
+.tier-benefits {
+    padding: 20px;
+}
+
+.tier-benefits p {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+    color: var(--gray-color);
+    font-size: 0.9rem;
+}
+
+.tier-benefits p::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Sponsor CTA */
+.sponsor-cta {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sponsor-cta p {
+    color: var(--gray-color);
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1199.98px) {
+    .title-sponsor-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+    
+    .sponsor-logo {
+        margin-right: 0;
+        margin-bottom: 30px;
+        width: 250px;
+        height: 150px;
+    }
+    
+    .sponsors-grid.small-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .sponsor-benefits {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .tier-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .tier-cards .tier-card:first-child,
+    .tier-cards .tier-card:last-child {
+        max-width: 100%;
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .sponsors-grid.small-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .benefits-list li {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .benefits-list li i {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .sponsors-intro,
+    .title-sponsors,
+    .sponsor-tier,
+    .become-sponsor {
+        padding: 60px 0;
+    }
+    
+    .section-heading h2 {
+        font-size: 2rem;
+    }
+    
+    .sponsors-grid.small-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .sponsor-item {
+        height: 160px;
+    }
+    
+    .tier-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .tier-cards .tier-card:first-child,
+    .tier-cards .tier-card:last-child {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .section-heading h2 {
+        font-size: 1.8rem;
+    }
+    
+    .sponsors-grid.small-grid {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .title-sponsor-card {
+        padding: 20px;
+    }
+    
+    .sponsor-logo {
+        width: 200px;
+        height: 120px;
+    }
+    
+    .sponsor-content h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Alumni Page styling */
+.leadership-grid {
+    display: grid;
+    gap: 30px;
+    justify-items: center; 
+}
+
+.leader-card {
+    width: 100%; 
+    max-width: 350px; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    background: white; 
+}
+
+.leader-image {
+    height: 280px;
+    width: 100%; 
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.leader-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.leader-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 1199.98px) {
+    .leadership-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 991.98px) {
+    .leadership-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+    .leader-image {
+        height: 260px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .leadership-grid {
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 25px;
+    }
+    .leader-image {
+        height: 240px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .leadership-grid {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    .leader-card {
+        max-width: 100%;
+    }
+}
+
+/* Equal Height Enforcement */
+.leadership-grid::after {
+    content: '';
+    width: 350px; 
+    padding: 0;
+    margin: 0;
+}
+
+/* Fix for last row alignment */
+@media (min-width: 992px) {
+    .leadership-grid {
+        justify-content: center;
+    }
+}
+
+
+/* Team Page Responsive Styles */
+
+/* Team Quote Section */
+@media (max-width: 991.98px) {
+    .team-quote {
+        padding: 40px 0;
+    }
+    .quote-content p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .quote-content p {
+        font-size: 1.3rem;
+    }
+    .quote-content i {
+        font-size: 2rem;
+    }
+}
+
+/* Team Overview Section */
+@media (max-width: 1199.98px) {
+    .overview-content {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .overview-content {
+        grid-template-columns: 1fr;
+    }
+    .overview-image {
+        order: -1;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .overview-text p {
+        font-size: 1rem;
+    }
+}
+
+/* Leadership Grid */
+@media (max-width: 1199.98px) {
+    .leadership-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 767.98px) {
+    .leader-card {
+        max-width: 350px;
+        margin: 0 auto 30px;
+    }
+    .leader-info span {
+        font-size: 1.5rem !important;
+    }
+}
+
+/* Subsystem Grids */
+@media (max-width: 1199.98px) {
+    .subsystem-grid,
+    .subsystem-grid2 {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .subsystem-grid,
+    .subsystem-grid2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .subsystem-grid,
+    .subsystem-grid2 {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+/* Faculty Advisors */
+@media (max-width: 991.98px) {
+    .advisors-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .advisor-card {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .advisor-card {
+        flex-direction: column;
+    }
+    .advisor-image {
+        height: 300px;
+    }
+}
+
+/* Join Team Section */
+@media (max-width: 767.98px) {
+    .join-team {
+        padding: 60px 0;
+    }
+    .join-content h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Card Uniform Sizing */
+.leader-card,
+.subsystem-card,
+.advisor-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.leader-image,
+.subsystem-image,
+.advisor-image {
+    flex: 0 0 auto;
+}
+
+.leader-info,
+.subsystem-info,
+.advisor-info {
+    flex: 1;
+}
+
+/* Image Aspect Ratios */
+.leader-image,
+.subsystem-image,
+.advisor-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.leader-image img,
+.subsystem-image img,
+.advisor-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Consistent Heights */
+.leader-image {
+    height: 350px;
+}
+
+.subsystem-image {
+    height: 250px;
+}
+
+.advisor-image {
+    height: 400px;
+}
+
+@media (max-width: 1199.98px) {
+    .leader-image {
+        height: 300px;
+    }
+    .advisor-image {
+        height: 350px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .leader-image {
+        height: 280px;
+    }
+    .subsystem-image {
+        height: 220px;
+    }
+    .advisor-image {
+        height: 300px;
+    }
+}
+
+/* Social Icons */
+.leader-social {
+    margin-top: auto;
+    padding-top: 15px;
+}
+
+/* Footer Links */
+@media (max-width: 767.98px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-logo {
+        margin-bottom: 30px;
+    }
+    .footer-links,
+    .footer-social {
+        margin-top: 30px;
+    }
+    .qlinks-grid {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
     }
 }

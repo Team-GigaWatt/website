@@ -115,8 +115,6 @@ p {
     background-color: var(--primary-color);
     color: white;
     border: 2px solid var(--primary-color);
-    
-
 }
 
 .btn-primary:hover {
@@ -712,6 +710,7 @@ footer {
 /* ===== PAGE BANNER ===== */
 .page-banner {
     height: 40vh;
+    width: auto;
     min-height: 300px;
     background-image: url('../assets/images/hero-bg.jpg');
     background-size: cover;
@@ -1859,8 +1858,9 @@ footer {
 
 .tier-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    align-items: stretch;
 }
 
 .tier-cards .tier-card:first-child,
@@ -1871,8 +1871,11 @@ footer {
 }
 
 .tier-card {
-    background-color: white;
-    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%; /* Ensures cards stretch to match tallest */
+    background: white;
+    border-radius: 8px;
     overflow: hidden;
     box-shadow: var(--box-shadow);
 }
