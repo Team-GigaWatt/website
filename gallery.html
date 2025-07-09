@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team GigaWatt - BITS Goa | Formula Student Racing Team</title>
+    <meta name="description" content="Team GigaWatt is BITS Pilani Goa Campus's Formula Student racing team dedicated to designing and building innovative race cars.">
+    <link rel="shortcut icon" href="assets/logo/gigawatt-favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo/gigawatt-logo.png" alt="Team GigaWatt Logo">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="cars.html">Cars</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="alumni.html">Alumni</a></li>
+                    <li><a href="sponsors.html">Sponsors</a></li>
+                    <li><a href="gallery.html"  class="active">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <main class="gallery-container">
+        <section class="gallery-grid">
+            <!-- Gallery images -->
+            <div class="gallery-item">
+                <img src="./assets/images/TGW Logo Black-Photoroom.png" alt="Alaska Landscape" onclick="openLightbox(this.src)">
+            </div>
+            <div class="gallery-item">
+                <img src="./assets/images/TGW Logo Black.png" alt="Alaska Landscape" onclick="openLightbox(this.src)">
+            </div>
+            <div class="gallery-item">
+                <img src="./assets/images/contact-bg.jpg" alt="Alaska Landscape" onclick="openLightbox(this.src)">
+            </div>
+            <div class="gallery-item">
+                <img src="./assets/images/picture3.jpg" alt="Alaska Landscape" onclick="openLightbox(this.src)">
+            </div>
+            <div class="gallery-item">
+                <img src="./assets/images/picture2.jpg" alt="Alaska Landscape" onclick="openLightbox(this.src)">
+            </div>
+            <div class="gallery-item">
+                <img src="./assets/images/picture1.jpg" alt="Alaska Landscape" onclick="openLightbox(this.src)">
+            </div>
+            <div class="gallery-item">
+                <img src="./assets/images/hero-bg.jpg" alt="Alaska Landscape" onclick="openLightbox(this.src)">
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Enlarged view">
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/logo/gigawatt-logo.png" alt="Team GigaWatt Logo">
+                    <p>Driving Innovation, Powering Excellence</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <div class="qlinks-grid">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="cars.html">Cars</a>
+                        <a href="achievements.html">Achievements</a>
+                        <a href="team.html">Team</a>
+                        <a href="alumni.html">Alumni</a>
+                        <a href="sponsors.html">Sponsors</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="https://instagram.com/teamgigawatt" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/team-gigawatt/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Team GigaWatt BITS Goa. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/gallery.js"></script>
+</body>
+</html>
