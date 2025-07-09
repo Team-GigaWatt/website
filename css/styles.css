@@ -1937,19 +1937,34 @@ footer {
     font-size: 0.95rem;
 }
 
-.tier-cards {
+.tier-cardi {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr; /* default mobile view */
     gap: 20px;
     align-items: stretch;
 }
 
-.tier-cards .tier-card:first-child,
-.tier-cards .tier-card:last-child {
+/* Make only the first card (Title) span full width */
+.tier-cardi .tier-card:first-child {
     grid-column: 1 / -1;
-    max-width: 400px;
+    max-width: 500px;
     justify-self: center;
 }
+
+/* Desktop layout — 3 columns after Title */
+@media (min-width: 768px) {
+    .tier-cardi {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .tier-cardi .tier-card:first-child {
+        grid-column: 1 / -1;
+        max-width: 600px;
+        justify-self: center;
+    }
+}
+
+
 
 .tier-card {
     display: flex;
