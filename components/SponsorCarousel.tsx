@@ -11,7 +11,7 @@ const sponsorLogos: LogoItem[] = [
   { src: "/sponsors/bitsaa.jpg",                        alt: "BITSAA",      title: "BITSAA" },
   { src: "/sponsors/bitsgoa.png",                       alt: "BITS Goa",    title: "BITS Goa" },
   { src: "/sponsors/boson.png",                         alt: "Boson",       title: "Boson" },
-  { src: "/sponsors/gemtech.jpeg",                      alt: "Gemtech",     title: "Gemtech" },
+  { src: "/sponsors/gemtech.jpg",                      alt: "Gemtech",     title: "Gemtech" },
   { src: "/sponsors/leanwatts.png",                     alt: "LeanWatts",   title: "LeanWatts" },
   { src: "/sponsors/matlab.png",                        alt: "MATLAB",      title: "MATLAB" },
   { src: "/sponsors/sandbox.jpg",                       alt: "Sandbox",     title: "Sandbox" },
